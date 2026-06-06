@@ -61,7 +61,12 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -77,13 +82,16 @@ a {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: hsl(var(--bg-primary));
 }
+
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--border-color));
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.5);
 }
@@ -137,9 +145,17 @@ a {
 }
 
 @keyframes float-slow {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(50px, 40px) scale(1.1); }
-  100% { transform: translate(-30px, 80px) scale(0.95); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(50px, 40px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-30px, 80px) scale(0.95);
+  }
 }
 
 /* Grid overlay background */
@@ -148,7 +164,7 @@ a {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: 
+  background-image:
     linear-gradient(to right, hsl(var(--text-primary) / 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, hsl(var(--text-primary) / 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -333,7 +349,8 @@ nav {
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: hsl(var(--text-primary));
 }
 
@@ -452,7 +469,7 @@ nav {
   border-radius: 28px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
   overflow: hidden;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -462,7 +479,7 @@ nav {
 
 .hero-profile-card:hover {
   transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-6px);
-  box-shadow: 0 36px 80px rgba(0,0,0,0.5), 0 0 0 1px hsl(var(--primary) / 0.2);
+  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px hsl(var(--primary) / 0.2);
 }
 
 .hero-profile-img {
@@ -492,7 +509,7 @@ nav {
 .hero-profile-info-strip {
   padding: 16px 20px;
   border-top: 1px solid var(--glass-border);
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .hero-profile-status {
@@ -564,7 +581,7 @@ nav {
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
@@ -632,8 +649,15 @@ nav {
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.6); opacity: 0.8; }
-  100% { transform: scale(2.2); opacity: 0; }
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
 }
 
 .hero-title {
@@ -745,8 +769,13 @@ nav {
 }
 
 @keyframes float-badge {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-15px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
 .fb-icon {
@@ -1241,7 +1270,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .viewport-label {
@@ -1273,7 +1302,8 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scaleX(-1); /* Mirror camera feed */
+  transform: scaleX(-1);
+  /* Mirror camera feed */
 }
 
 .viewport-stream-container canvas {
@@ -1282,7 +1312,8 @@ nav {
   width: 100%;
   height: 100%;
   z-index: 2;
-  transform: scaleX(-1); /* Mirror canvas to match video */
+  transform: scaleX(-1);
+  /* Mirror canvas to match video */
 }
 
 .viewport-placeholder {
@@ -1337,12 +1368,21 @@ nav {
 }
 
 @keyframes spin-dashed {
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse-ai {
-  0% { border-color: hsl(var(--primary) / 0.4); box-shadow: 0 0 10px hsl(var(--primary) / 0.1); }
-  100% { border-color: hsl(var(--secondary) / 0.8); box-shadow: 0 0 25px hsl(var(--secondary) / 0.4); }
+  0% {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.1);
+  }
+
+  100% {
+    border-color: hsl(var(--secondary) / 0.8);
+    box-shadow: 0 0 25px hsl(var(--secondary) / 0.4);
+  }
 }
 
 .ai-avatar-inner {
@@ -1466,9 +1506,17 @@ nav {
   margin-bottom: 24px;
 }
 
-.round-winner-player { color: hsl(var(--success)); }
-.round-winner-ai { color: hsl(var(--primary)); }
-.round-winner-draw { color: hsl(var(--text-secondary)); }
+.round-winner-player {
+  color: hsl(var(--success));
+}
+
+.round-winner-ai {
+  color: hsl(var(--primary));
+}
+
+.round-winner-draw {
+  color: hsl(var(--text-secondary));
+}
 
 /* Game Stats & Sidebar Controls */
 .game-controls-sidebar {
@@ -1604,9 +1652,17 @@ nav {
   font-weight: 700;
 }
 
-.outcome-win { color: hsl(var(--success)); }
-.outcome-lose { color: hsl(var(--primary)); }
-.outcome-draw { color: hsl(var(--text-secondary)); }
+.outcome-win {
+  color: hsl(var(--success));
+}
+
+.outcome-lose {
+  color: hsl(var(--primary));
+}
+
+.outcome-draw {
+  color: hsl(var(--text-secondary));
+}
 
 .history-moves {
   color: hsl(var(--text-secondary));
@@ -1701,7 +1757,8 @@ nav {
   color: hsl(var(--text-secondary));
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 12px 16px;
   border-radius: 10px;
@@ -1714,7 +1771,8 @@ nav {
   transition: all var(--transition-fast);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   border-color: hsl(var(--primary));
   background: hsl(var(--bg-primary));
   box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
@@ -1736,17 +1794,18 @@ footer {
     text-align: center;
     gap: 60px;
   }
-  
+
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-actions {
     justify-content: center;
   }
-  
-  .about-grid, .contact-grid {
+
+  .about-grid,
+  .contact-grid {
     grid-template-cols: 1fr;
   }
 
@@ -1798,7 +1857,7 @@ footer {
   .arena-viewports {
     grid-template-columns: 1fr;
   }
-  
+
   .game-modal-container {
     height: 95vh;
   }
@@ -1876,6 +1935,7 @@ footer {
   background: rgba(255, 255, 255, 0.08);
   color: #e6edf3;
 }
+
 .connect-card:hover .connect-icon-github {
   background: rgba(255, 255, 255, 0.15);
 }
@@ -1884,6 +1944,7 @@ footer {
   background: rgba(10, 102, 194, 0.18);
   color: #4da3ff;
 }
+
 .connect-card:hover .connect-icon-linkedin {
   background: rgba(10, 102, 194, 0.3);
 }
@@ -1892,6 +1953,7 @@ footer {
   background: hsl(var(--primary) / 0.15);
   color: hsl(var(--primary));
 }
+
 .connect-card:hover .connect-icon-email {
   background: hsl(var(--primary) / 0.28);
 }
@@ -1900,6 +1962,7 @@ footer {
   background: hsl(var(--success) / 0.15);
   color: hsl(var(--success));
 }
+
 .connect-card:hover .connect-icon-resume {
   background: hsl(var(--success) / 0.28);
 }
@@ -1956,9 +2019,11 @@ footer {
   background: rgba(0, 0, 0, 0.06);
   color: #24292f;
 }
+
 [data-theme="light"] .connect-card:hover .connect-icon-github {
   background: rgba(0, 0, 0, 0.12);
 }
+
 [data-theme="light"] .connect-icon-linkedin {
   color: #0a66c2;
 }
@@ -1968,6 +2033,7 @@ footer {
   .connect-cards {
     grid-template-columns: 1fr 1fr;
   }
+
   .contact-hero-actions {
     flex-direction: column;
     align-items: center;
