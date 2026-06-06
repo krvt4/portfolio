@@ -1108,24 +1108,28 @@ nav {
 
 .project-media-wrapper {
   width: 100%;
-  height: 100%;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(3, 4, 8, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
 }
 
 .project-media-img {
-  width: 100%;
-  height: auto;
-  max-height: 380px;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
   transition: transform var(--transition-slow);
 }
 
 .project-card:hover .project-media-img {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .project-info-side {
@@ -2228,4 +2232,178 @@ footer {
   .connect-cards {
     grid-template-columns: 1fr;
   }
+}
+
+/* Media tabs container inside visual */
+.project-media-side {
+  flex-direction: column !important;
+  gap: 16px;
+  justify-content: flex-start !important;
+}
+
+.project-media-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid var(--glass-border);
+  margin-top: 8px;
+}
+
+.media-tab-btn {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  color: hsl(var(--text-secondary));
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.media-tab-btn.active {
+  color: #fff;
+  background: hsl(var(--primary));
+  box-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+}
+
+/* Scanner styles */
+.scanner-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scanner-viewport {
+  width: 100%;
+  height: 200px;
+  background: #020306;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-viewport video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  display: none;
+}
+
+.scanner-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(var(--text-secondary));
+  z-index: 2;
+}
+
+.scanner-placeholder-orb {
+  font-size: 44px;
+  margin-bottom: 6px;
+  animation: pulse-scanner-orb 2s infinite ease-in-out;
+}
+
+@keyframes pulse-scanner-orb {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255,165,0,0.3)); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 0 25px rgba(255,165,0,0.8)); }
+}
+
+.scanner-laser {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff3b30, transparent);
+  box-shadow: 0 0 8px #ff3b30, 0 0 15px #ff3b30;
+  z-index: 10;
+  display: none;
+}
+
+.scanner-laser.active {
+  display: block;
+  animation: laser-sweep 2s infinite linear;
+}
+
+@keyframes laser-sweep {
+  0% { top: 0%; }
+  50% { top: 100%; }
+  100% { top: 0%; }
+}
+
+.scanner-overlay-text {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.82);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #00ff66;
+  border: 1px solid rgba(0, 255, 102, 0.25);
+  z-index: 11;
+  pointer-events: none;
+}
+
+.scanner-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* 3D Wireframe rotation view */
+.scanner-mesh-overlay {
+  position: absolute;
+  inset: 0;
+  background: #020306;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.scanner-wireframe-mesh {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1.5px dashed hsl(var(--primary));
+  position: relative;
+  animation: spin-mesh 6s infinite linear;
+}
+
+.scanner-wireframe-mesh::before,
+.scanner-wireframe-mesh::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--secondary) / 0.5);
+  animation: spin-mesh-inner 4s infinite linear reverse;
+}
+
+.scanner-wireframe-mesh::after {
+  inset: 22px;
+  border: 1.5px dotted hsl(var(--primary) / 0.8);
+}
+
+@keyframes spin-mesh {
+  0% { transform: rotate(0deg) rotateX(45deg); }
+  100% { transform: rotate(360deg) rotateX(45deg); }
+}
+
+@keyframes spin-mesh-inner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
