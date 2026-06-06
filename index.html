@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO Meta Tags -->
   <title>Khristopher Tabiquero – Full-Stack & ML Engineer Portfolio</title>
   <meta name="description"
     content="Portfolio of Khristopher Tabiquero, a Full-Stack Software Engineer and ML Practitioner based in Manila, Philippines. Featuring an interactive real-time Rock Paper Scissors AI camera game.">
@@ -13,27 +12,22 @@
   <meta name="keywords"
     content="Software Engineer, Machine Learning, Full-Stack, Rock Paper Scissors Camera Game, MediaPipe Hands, Web Audio API, Next.js, FastAPI">
 
-  <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- Background Orbs -->
   <div class="ambient-bg" aria-hidden="true">
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
     <div class="glow-orb orb-3"></div>
   </div>
 
-  <!-- Grid Background Grid -->
   <div class="grid-overlay" aria-hidden="true"></div>
 
-  <!-- Navigation Bar -->
   <nav>
     <div class="nav-container">
       <a href="#hero" class="logo">
@@ -48,26 +42,21 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- Theme Toggle Button -->
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle light/dark theme">
           <i data-lucide="sun" class="sun-icon"></i>
         </button>
-        <!-- Contact CTA Button -->
         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
 
-      <!-- Mobile Menu Button -->
       <button class="btn-icon menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="container hero-grid">
 
-      <!-- Left: Content -->
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-pulse"></span>
@@ -116,10 +105,8 @@
         </div>
       </div>
 
-      <!-- Right: Profile Card -->
       <div class="hero-profile-side">
 
-        <!-- Floating skill chips -->
         <div class="hero-chip chip-1">
           <i data-lucide="code-2"></i>
           <span>Full-Stack Dev</span>
@@ -133,13 +120,8 @@
           <span>Computer Vision</span>
         </div>
 
-        <!-- Profile card -->
         <div class="hero-profile-card">
-          <!-- Swap src to your real photo: profile.jpg -->
           <div class="hero-profile-initials" id="hero-profile-placeholder">KT</div>
-          <!-- Uncomment line below once you add profile.jpg to d:\Portfolio\ -->
-          <!-- <img src="profile.jpg" alt="Khristopher Tabiquero" class="hero-profile-img" id="hero-profile-img"> -->
-
           <div class="hero-profile-info-strip">
             <div class="hero-profile-status">
               <span class="status-dot"></span>
@@ -159,7 +141,6 @@
   </section>
 
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <div class="section-header">
@@ -261,7 +242,6 @@
     </div>
   </section>
 
-  <!-- Tech Stack Section -->
   <section id="tech-stack">
     <div class="container">
       <div class="section-header">
@@ -271,7 +251,6 @@
       </div>
 
       <div class="stack-grid">
-        <!-- Category: ML & Interactive Systems -->
         <div class="stack-category glass-panel">
           <div class="stack-category-header">
             <i data-lucide="brain" class="stack-category-icon"></i>
@@ -302,7 +281,6 @@
           </div>
         </div>
 
-        <!-- Category: Web Development -->
         <div class="stack-category glass-panel">
           <div class="stack-category-header">
             <i data-lucide="code-xml" class="stack-category-icon"></i>
@@ -336,7 +314,6 @@
     </div>
   </section>
 
-  <!-- Projects Showcase Section -->
   <section id="projects">
     <div class="container">
       <div class="section-header">
@@ -353,7 +330,6 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Software Engineering -->
         <div class="project-card glass-panel" data-category="software">
           <div class="project-card-banner">
             <img class="project-banner-img"
@@ -379,7 +355,6 @@
           </div>
         </div>
 
-        <!-- Project 2: Machine Learning -->
         <div class="project-card glass-panel" data-category="ml">
           <div class="project-card-banner">
             <img class="project-banner-img"
@@ -405,7 +380,6 @@
           </div>
         </div>
 
-        <!-- Project 3: Rock Paper Scissors AI Showstopper -->
         <div class="project-card glass-panel" data-category="interactive">
           <div class="project-card-banner">
             <img class="project-banner-img"
@@ -437,12 +411,10 @@
     </div>
   </section>
 
-  <!-- Interactive RPS Game Modal Dialog -->
   <div class="game-modal" id="game-modal">
     <div class="game-modal-overlay" id="game-modal-close-overlay"></div>
     <div class="game-modal-container glass-panel">
 
-      <!-- Modal Header -->
       <div class="game-modal-header">
         <h3>
           <i data-lucide="gamepad-2" style="color: hsl(var(--primary));"></i>
@@ -453,29 +425,23 @@
         </button>
       </div>
 
-      <!-- Modal Body -->
       <div class="game-modal-body">
 
-        <!-- Main Game Area -->
         <div class="game-main-area">
           <div class="arena-viewports">
 
-            <!-- Viewport 1: Player (Webcam Feed) -->
             <div class="viewport-panel">
               <div class="viewport-label">You (Webcam)</div>
 
-              <!-- Real-time gesture prediction overlay -->
               <div class="gesture-detected-overlay" id="gesture-overlay">
                 Detected: <span id="gesture-detected-text">Searching...</span>
               </div>
 
-              <!-- Stream Content Container -->
               <div class="viewport-stream-container">
                 <video id="webcam-feed" autoplay playsinline muted></video>
                 <canvas id="hand-mesh-canvas"></canvas>
               </div>
 
-              <!-- Placeholder screen prior to camera start -->
               <div class="viewport-placeholder" id="camera-placeholder">
                 <i data-lucide="camera"></i>
                 <h5>Camera Access Required</h5>
@@ -487,7 +453,6 @@
               </div>
             </div>
 
-            <!-- Viewport 2: AI Opponent -->
             <div class="viewport-panel ai-view">
               <div class="viewport-label">AI Opponent</div>
 
@@ -503,12 +468,9 @@
             </div>
           </div>
 
-          <!-- Large Arena Countdowns and Rounds Reveal Screen Overlay -->
           <div class="arena-overlay-screen" id="arena-overlay">
-            <!-- Countdown states -->
             <div class="countdown-number" id="countdown-text">3</div>
 
-            <!-- Final round show states -->
             <div class="round-result-card" id="result-card">
               <h4 class="round-result-title" id="result-title">YOU WIN!</h4>
               <p class="round-result-subtitle" id="result-subtitle">Paper wraps Rock</p>
@@ -517,10 +479,8 @@
           </div>
         </div>
 
-        <!-- Sidebar Controls & Scoreboard -->
         <div class="game-controls-sidebar">
 
-          <!-- Scoreboard Panel -->
           <div class="scoreboard-card glass-panel">
             <h4 class="scoreboard-title">
               <i data-lucide="trophy" style="width: 16px; height: 16px; color: gold;"></i>
@@ -542,7 +502,6 @@
             </div>
           </div>
 
-          <!-- Game Controls Card -->
           <div class="control-buttons-card glass-panel">
             <button class="btn btn-primary game-btn-play" id="btn-start-round" disabled>
               Play Round
@@ -550,12 +509,10 @@
             </button>
 
             <div class="game-options-row">
-              <!-- Audio Settings -->
               <button class="btn btn-secondary btn-icon" id="btn-toggle-sound" title="Toggle audio sound effects">
                 <i data-lucide="volume-2" id="sound-icon"></i>
               </button>
 
-              <!-- Difficulty Selection Toggle -->
               <button class="btn btn-secondary" id="btn-toggle-difficulty" title="Change AI logic difficulty">
                 Difficulty: <strong id="difficulty-label">Adaptive</strong>
               </button>
@@ -564,7 +521,6 @@
             <button class="btn btn-secondary" id="btn-reset-game">Reset Scoreboard</button>
           </div>
 
-          <!-- History Logs Panel -->
           <div class="history-card glass-panel">
             <h4>Outcome Feed</h4>
             <ul class="history-list" id="history-list">
@@ -577,7 +533,6 @@
     </div>
   </div>
 
-  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <div class="section-header">
@@ -586,23 +541,20 @@
         <div class="section-divider"></div>
       </div>
 
-      <!-- Hero CTA Buttons -->
       <div class="contact-hero-actions">
         <a href="mailto:tabiquerokhristopher@gmail.com" class="btn btn-primary" id="contact-lets-build">
           Let's Build Together
           <i data-lucide="handshake"></i>
         </a>
-        <a href="https://tabiquero-resume.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="btn btn-secondary" id="contact-download-resume">
+        <a href="/vercel-resume" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+          id="contact-download-resume">
           Download Resume
           <i data-lucide="download"></i>
         </a>
       </div>
 
-      <!-- Connect Cards Grid -->
       <div class="connect-cards">
 
-        <!-- GitHub Primary -->
         <a href="https://github.com/keyarvi" target="_blank" rel="noopener noreferrer" class="connect-card glass-panel"
           id="connect-github-1">
           <div class="connect-card-icon connect-icon-github">
@@ -616,7 +568,6 @@
           <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
         </a>
 
-        <!-- GitHub Secondary -->
         <a href="https://github.com/krvt4" target="_blank" rel="noopener noreferrer" class="connect-card glass-panel"
           id="connect-github-2">
           <div class="connect-card-icon connect-icon-github">
@@ -630,7 +581,6 @@
           <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
         </a>
 
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/khristopher-tabiquero-24b4963a0/" target="_blank" rel="noopener noreferrer"
           class="connect-card glass-panel" id="connect-linkedin">
           <div class="connect-card-icon connect-icon-linkedin">
@@ -644,7 +594,6 @@
           <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
         </a>
 
-        <!-- Email -->
         <a href="mailto:tabiquerokhristopher@gmail.com" class="connect-card glass-panel" id="connect-email">
           <div class="connect-card-icon connect-icon-email">
             <i data-lucide="mail"></i>
@@ -657,9 +606,8 @@
           <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
         </a>
 
-        <!-- Resume -->
-        <a href="https://tabiquero-resume.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="connect-card glass-panel" id="connect-resume">
+        <a href="/vercel-resume" target="_blank" rel="noopener noreferrer" class="connect-card glass-panel"
+          id="connect-resume">
           <div class="connect-card-icon connect-icon-resume">
             <i data-lucide="file-text"></i>
           </div>
@@ -736,21 +684,17 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Khristopher Tabiquero. Built with Vanilla JS, CSS Grid &amp; MediaPipe.</p>
     </div>
   </footer>
 
-  <!-- Lucide Vector Icons Library -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- MediaPipe Handpose Libraries & Utilities -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
 
-  <!-- App Scripts -->
   <script src="app.js"></script>
   <script src="rps.js"></script>
 </body>
