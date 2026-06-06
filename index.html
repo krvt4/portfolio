@@ -330,80 +330,270 @@
       </div>
 
       <div class="projects-grid">
-        <div class="project-card glass-panel" data-category="software">
-          <div class="project-card-banner">
-            <img class="project-banner-img"
-              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%230b0e1a%22/%3E%3Crect x%3D%2250%22 y%3D%2250%22 width%3D%22300%22 height%3D%22100%22 rx%3D%228%22 fill%3D%22%23161b33%22 stroke%3D%22%232b3566%22 stroke-width%3D%222%22/%3E%3Ccircle cx%3D%2290%22 cy%3D%22100%22 r%3D%2220%22 fill%3D%22%233b82f6%22/%3E%3Crect x%3D%22130%22 y%3D%2290%22 width%3D%22150%22 height%3D%228%22 rx%3D%224%22 fill%3D%22%237c3aed%22/%3E%3Crect x%3D%22130%22 y%3D%22105%22 width%3D%22100%22 height%3D%226%22 rx%3D%223%22 fill%3D%22%23475569%22/%3E%3C/svg%3E"
-              alt="NeuroScribe Preview">
-            <span class="project-card-badge">Web Application</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">NeuroScribe Platform</h3>
-            <p class="project-card-desc">
-              A high-performance SaaS editor that utilizes AI vector-embeddings to organize and search developer study
-              notes.
-            </p>
-            <div class="project-card-tags">
-              <span class="project-tag">React / Vite</span>
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">PostgreSQL</span>
-            </div>
-            <div class="project-card-links">
-              <a href="#" class="project-card-link">View Source <i data-lucide="git-branch"
-                  style="width: 14px;"></i></a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-card glass-panel" data-category="ml">
-          <div class="project-card-banner">
-            <img class="project-banner-img"
-              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%230b0e1a%22/%3E%3Ccircle cx%3D%22200%22 cy%3D%22100%22 r%3D%2260%22 fill%3D%22none%22 stroke%3D%22%237c3aed%22 stroke-width%3D%222%22/%3E%3Cpath d%3D%22M150 100 L250 100 M200 50 L200 150 M165 65 L235 135 M165 135 L235 65%22 stroke%3D%22%233b82f6%22 stroke-width%3D%221.5%22 stroke-dasharray%3D%224 2%22/%3E%3C/svg%3E"
-              alt="Cognitive Diagnostic Model Preview">
-            <span class="project-card-badge">Analytics API</span>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">Cognitive Diagnostic Model</h3>
-            <p class="project-card-desc">
-              A Python-based backend that models student capability metrics using Bayesian networks to generate tailored
-              testing materials.
-            </p>
-            <div class="project-card-tags">
-              <span class="project-tag">FastAPI</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">PyTorch</span>
-            </div>
-            <div class="project-card-links">
-              <a href="#" class="project-card-link">View Repository <i data-lucide="github"
-                  style="width: 14px;"></i></a>
-            </div>
-          </div>
-        </div>
-
+        <!-- Project 1: RPS AI (Interactive) -->
         <div class="project-card glass-panel" data-category="interactive">
-          <div class="project-card-banner">
-            <img class="project-banner-img"
-              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%23080c1f%22/%3E%3Ctext x%3D%2250%25%22 y%3D%22110%22 font-size%3D%2270%22 text-anchor%3D%22middle%22%3E✊ ✋ ✌️%3C/text%3E%3C/svg%3E"
-              alt="Rock Paper Scissors Game Preview">
-            <span class="project-card-badge">Hardware API / Vision</span>
+          <div class="project-media-side">
+            <div class="project-media-wrapper">
+              <img class="project-media-img" src="images/rps-cv-preview.png" alt="RPS AI Camera Gesture Tracking Preview">
+            </div>
           </div>
-          <div class="project-card-body">
-            <h3 class="project-card-title">RPS-AI Camera Arena</h3>
-            <p class="project-card-desc">
-              An interactive computer vision project allowing users to play Rock Paper Scissors against an adaptive,
-              predictive AI opponent using their camera in real-time.
-            </p>
-            <div class="project-card-tags">
+          <div class="project-info-side">
+            <span class="project-showcase-category">Hardware Interaction &amp; Computer Vision</span>
+            <h3 class="project-showcase-title">RPS-AI Camera Arena</h3>
+            <p class="project-showcase-meta">2026 &bull; Browser-based Engine &bull; Client-side AI</p>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Challenge</span>
+              <p class="project-section-text">
+                Implementing a real-time computer vision system directly in the browser that predicts player choices without latency or server roundtrips.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Solution</span>
+              <p class="project-section-text">
+                Developed an on-device MediaPipe gesture recognition game with an adaptive AI prediction model that studies user trends to increase opponent capability.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Key Innovations</span>
+              <ul class="project-innovations-list">
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Client-side MediaPipe hand mesh tracking (21 dynamic points)</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Adaptive heuristic prediction engine studying user patterns</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Fully local browser computation with canvas rendering loop</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Immersive sound effects via Web Audio API</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-showcase-tags">
               <span class="project-tag">MediaPipe Hands</span>
               <span class="project-tag">Web Audio API</span>
               <span class="project-tag">Vanilla JS</span>
+              <span class="project-tag">CSS Grid</span>
             </div>
-            <div class="project-card-links">
-              <button id="project-play-game" class="btn btn-primary btn-sm"
-                style="padding: 8px 16px; border-radius: 8px;">
+
+            <div class="project-showcase-actions">
+              <button id="project-play-game" class="btn btn-primary">
                 Launch Live Game
-                <i data-lucide="play" style="width: 12px; height: 12px;"></i>
+                <i data-lucide="play" style="width: 14px; height: 14px;"></i>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Thesis Reconstruction (ML) -->
+        <div class="project-card glass-panel alt-layout" data-category="ml">
+          <div class="project-media-side">
+            <div class="project-media-wrapper">
+              <img class="project-media-img" src="images/orange-grading-table.png" alt="Orange Defect Defect Detection & Grading Matrix">
+            </div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-showcase-category">Agri-Tech Research &amp; Machine Learning</span>
+            <h3 class="project-showcase-title">3D Orange Reconstruction &amp; Grading</h3>
+            <p class="project-showcase-meta">2025 &bull; Dual-Camera Pipeline &bull; Thesis Project</p>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Challenge &amp; Solution</span>
+              <p class="project-section-text">
+                Reconstructing high-fidelity 3D meshes of agricultural produce from dual-camera setups while performing real-time quality grading and surface defect segmentation. Built a Python pipeline using texture baking, dual-camera coordinate mapping, and machine learning models to automatically grade oranges (Premium, Grade A, Grade B, Processing, Reject) in a custom 3D web visualizer.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Capture &amp; Processing Workflow</span>
+              <div class="thesis-workflow-container">
+                <div class="thesis-workflow-grid">
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">1</span>
+                    <span>Connect dual cameras; position rotating table with fruit.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">2</span>
+                    <span>Launch <code>capture_and_reconstruct.py</code>; enter batch count.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">3</span>
+                    <span>Verify feeds show READY; press Spacebar to start.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">4</span>
+                    <span>Table rotates 360° for 20s as image pairs capture.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">5</span>
+                    <span>Press Enter to process reconstruction &amp; quality classification.</span>
+                  </div>
+                  <div class="workflow-step">
+                    <span class="workflow-step-num">6</span>
+                    <span>Review interactive 3D model, grading label, and defect markers.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Key Innovations</span>
+              <ul class="project-innovations-list">
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>3D reconstruction of 2D images via texture baking &amp; camera mapping</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Dual camera capture loops synced with automated rotating table</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Real-time grading and defect detection markers in 3D WebViewer</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-showcase-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">3D Reconstruction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: NutriMateApp (Software) -->
+        <div class="project-card glass-panel" data-category="software">
+          <div class="project-media-side">
+            <div class="project-media-wrapper">
+              <img class="project-media-img" src="images/NutriMate.png" alt="NutriMate App Macro Tracker Showcase">
+            </div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-showcase-category">Mobile Application Case Study</span>
+            <h3 class="project-showcase-title">NutriMateApp</h3>
+            <p class="project-showcase-meta">2025 &bull; Android &bull; Offline-First Native App</p>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Challenge</span>
+              <p class="project-section-text">
+                Users struggle to consistently track their daily macros due to overly complex interfaces and reliance on constant internet connectivity.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Solution</span>
+              <p class="project-section-text">
+                Engineered a native Kotlin application with a robust SQLite architecture, enabling fluid, offline-first interactions and highly personalized caloric tracking.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Key Innovations</span>
+              <ul class="project-innovations-list">
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Dynamic macro tracking (protein, carbs, fats)</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Personalized daily caloric goal formulations</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Interactive routine builder and wellness schedules</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Robust offline SQLite architecture for fluid performance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-showcase-tags">
+              <span class="project-tag">Kotlin</span>
+              <span class="project-tag">Android Studio</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Material Design</span>
+            </div>
+
+            <div class="project-showcase-actions">
+              <a href="https://github.com/keyarvi/NutriMateApp" target="_blank" rel="noopener noreferrer" class="btn-pill-action btn-dark">
+                <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: UP-DRRM (Software) -->
+        <div class="project-card glass-panel alt-layout" data-category="software">
+          <div class="project-media-side">
+            <div class="project-media-wrapper">
+              <img class="project-media-img" src="images/up-drrm-dashboard.png" alt="UP-DRRM Hub Information System Dashboard Showcase">
+            </div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-showcase-category">Internship Experience &amp; Full-Stack</span>
+            <h3 class="project-showcase-title">UP-DRRM Hub Information System</h3>
+            <p class="project-showcase-meta">2025 &bull; Web System &bull; High Availability</p>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Challenge</span>
+              <p class="project-section-text">
+                Developing a high-security, responsive disaster risk reduction and management information hub for the University of the Philippines.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Solution</span>
+              <p class="project-section-text">
+                Contributed as a Fullstack Developer to build and deploy a real-time tracking, resource management, and notification system.
+              </p>
+            </div>
+
+            <div class="project-showcase-section">
+              <span class="project-section-label">Key Innovations</span>
+              <ul class="project-innovations-list">
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Real-time disaster mapping and resource tracking</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Secure role-based admin dashboard with high performance</span>
+                </li>
+                <li>
+                  <span class="innovations-check-icon"><i data-lucide="check"></i></span>
+                  <span>Responsive, mobile-first design with high accessibility standards</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-showcase-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">TailwindCSS</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+
+            <div class="project-showcase-actions">
+              <a href="https://up-drrm-h.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-pill-action btn-dark">
+                <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                Visit Live App
+              </a>
             </div>
           </div>
         </div>
