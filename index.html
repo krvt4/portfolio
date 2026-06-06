@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Khristopher Tabiquero – Full-Stack & ML Engineer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Khristopher Tabiquero, a Full-Stack Software Engineer and ML Practitioner based in Manila, Philippines. Featuring an interactive real-time Rock Paper Scissors AI camera game.">
+  <meta name="author" content="Portfolio Owner">
+  <meta name="keywords"
+    content="Software Engineer, Machine Learning, Full-Stack, Rock Paper Scissors Camera Game, MediaPipe Hands, Web Audio API, Next.js, FastAPI">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Background Orbs -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Grid Background Grid -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span>KT</span><span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle light/dark theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+        </button>
+        <!-- Contact CTA Button -->
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="btn-icon menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container hero-grid">
+
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          <span>Full-Stack & ML Engineer · Open to Opportunities</span>
+        </div>
+
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">
+          Khristopher<br>
+          Tabiquero
+          <span class="hero-name-dot">!</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Building <span class="highlight">Intelligent</span> &amp; <span class="highlight">Scalable</span> Web
+          Experiences
+        </p>
+
+        <p class="hero-desc">
+          Full-stack developer and ML practitioner based in Manila, Philippines. I craft performant web applications and
+          integrate machine learning directly into the browser — turning complex problems into elegant, user-centered
+          experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            View Projects
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+          <button id="hero-play-game" class="btn btn-secondary">
+            Play RPS AI Game
+            <i data-lucide="gamepad-2"></i>
+          </button>
+          <span class="hero-social-divider"></span>
+          <a href="https://github.com/keyarvi" target="_blank" rel="noopener noreferrer" class="btn-icon"
+            aria-label="GitHub keyarvi">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/khristopher-tabiquero-24b4963a0/" target="_blank"
+            rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:tabiquerokhristopher@gmail.com" class="btn-icon" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Card -->
+      <div class="hero-profile-side">
+
+        <!-- Floating skill chips -->
+        <div class="hero-chip chip-1">
+          <i data-lucide="code-2"></i>
+          <span>Full-Stack Dev</span>
+        </div>
+        <div class="hero-chip chip-2">
+          <i data-lucide="brain"></i>
+          <span>ML / AI</span>
+        </div>
+        <div class="hero-chip chip-3">
+          <i data-lucide="eye"></i>
+          <span>Computer Vision</span>
+        </div>
+
+        <!-- Profile card -->
+        <div class="hero-profile-card">
+          <!-- Swap src to your real photo: profile.jpg -->
+          <div class="hero-profile-initials" id="hero-profile-placeholder">KT</div>
+          <!-- Uncomment line below once you add profile.jpg to d:\Portfolio\ -->
+          <!-- <img src="profile.jpg" alt="Khristopher Tabiquero" class="hero-profile-img" id="hero-profile-img"> -->
+
+          <div class="hero-profile-info-strip">
+            <div class="hero-profile-status">
+              <span class="status-dot"></span>
+              Available for Hire
+            </div>
+            <p class="hero-profile-name-strip">Khristopher Tabiquero</p>
+            <p class="hero-profile-role-strip">Software & ML Engineer</p>
+            <div class="hero-profile-location">
+              <i data-lucide="map-pin"></i>
+              Manila, Philippines
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Discover</p>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main">
+          <div class="philosophy-panel glass-panel">
+            <h3>My Engineering Philosophy</h3>
+            <p>
+              I believe in building software that doesn't just work, but is **intelligent, performant, and delightfully
+              responsive**. My coding approach lives at the intersection of robust backend services, modular frontend
+              systems, and state-of-the-art browser capabilities.
+            </p>
+            <p>
+              Whether it is architecting microservices, optimizing rendering loops, or compiling machine learning
+              inference directly to run on client-side CPU/GPU, I prioritize clean architecture and memory efficiency to
+              provide premium user experiences.
+            </p>
+          </div>
+
+          <h3 class="timeline-title">Professional & Academic Timeline</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-date">Present</span>
+                <span class="timeline-role">Software Architect & Researcher</span>
+              </div>
+              <div class="timeline-org">Autonomous Systems Laboratory</div>
+              <div class="timeline-desc">
+                Developing machine learning diagnostic frameworks, real-time edge processing web software, and modular
+                developer kits.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-date">2023 - 2025</span>
+                <span class="timeline-role">Full-Stack Engineer</span>
+              </div>
+              <div class="timeline-org">CloudTech Solutions</div>
+              <div class="timeline-desc">
+                Built and scale high-concurrency SaaS applications, integrated analytics pipelines, and designed
+                state-of-the-art interactive dashboards.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <span class="timeline-date">Graduate</span>
+                <span class="timeline-role">B.S. in Computer Science</span>
+              </div>
+              <div class="timeline-org">State University</div>
+              <div class="timeline-desc">
+                Specialized in software engineering, cloud computing, systems optimization, and artificial intelligence
+                models.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-sidebar">
+          <div class="strength-card glass-panel">
+            <h4>Core Priorities</h4>
+            <div class="strength-list">
+              <div class="strength-item">
+                <div class="strength-icon"><i data-lucide="zap"></i></div>
+                <div class="strength-content">
+                  <h5>High Performance</h5>
+                  <p>Minimizing application bundle sizes and maximizing local assets loading speeds.</p>
+                </div>
+              </div>
+
+              <div class="strength-item">
+                <div class="strength-icon"><i data-lucide="shield"></i></div>
+                <div class="strength-content">
+                  <h5>Privacy & Security</h5>
+                  <p>Prioritizing on-device browser computation over user data exposure.</p>
+                </div>
+              </div>
+
+              <div class="strength-item">
+                <div class="strength-icon"><i data-lucide="layout"></i></div>
+                <div class="strength-content">
+                  <h5>Rich Interaction</h5>
+                  <p>Incorporating micro-interactions, responsive grids, and physical hardware APIs like Webcams.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="tech-stack">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Skills</p>
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="stack-grid">
+        <!-- Category: ML & Interactive Systems -->
+        <div class="stack-category glass-panel">
+          <div class="stack-category-header">
+            <i data-lucide="brain" class="stack-category-icon"></i>
+            <span class="stack-category-title">Machine Learning & Computer Vision</span>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="eye"></i></div>
+              <div class="skill-info">
+                <h4>MediaPipe Hands</h4>
+                <p>On-device gesture tracking</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="cpu"></i></div>
+              <div class="skill-info">
+                <h4>TensorFlow.js</h4>
+                <p>Neural networks in browser</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="line-chart"></i></div>
+              <div class="skill-info">
+                <h4>Scikit-Learn</h4>
+                <p>Data modeling & classification</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Web Development -->
+        <div class="stack-category glass-panel">
+          <div class="stack-category-header">
+            <i data-lucide="code-xml" class="stack-category-icon"></i>
+            <span class="stack-category-title">Software Engineering & Web Stack</span>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="chrome"></i></div>
+              <div class="skill-info">
+                <h4>Next.js / React</h4>
+                <p>Modern frontend frameworks</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="terminal"></i></div>
+              <div class="skill-info">
+                <h4>FastAPI / Node.js</h4>
+                <p>Robust server integrations</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon-wrap"><i data-lucide="database"></i></div>
+              <div class="skill-info">
+                <h4>PostgreSQL / SQL</h4>
+                <p>Relational database structures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Showcase</p>
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="software">Software Eng</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="interactive">Interactive</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Software Engineering -->
+        <div class="project-card glass-panel" data-category="software">
+          <div class="project-card-banner">
+            <img class="project-banner-img"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%230b0e1a%22/%3E%3Crect x%3D%2250%22 y%3D%2250%22 width%3D%22300%22 height%3D%22100%22 rx%3D%228%22 fill%3D%22%23161b33%22 stroke%3D%22%232b3566%22 stroke-width%3D%222%22/%3E%3Ccircle cx%3D%2290%22 cy%3D%22100%22 r%3D%2220%22 fill%3D%22%233b82f6%22/%3E%3Crect x%3D%22130%22 y%3D%2290%22 width%3D%22150%22 height%3D%228%22 rx%3D%224%22 fill%3D%22%237c3aed%22/%3E%3Crect x%3D%22130%22 y%3D%22105%22 width%3D%22100%22 height%3D%226%22 rx%3D%223%22 fill%3D%22%23475569%22/%3E%3C/svg%3E"
+              alt="NeuroScribe Preview">
+            <span class="project-card-badge">Web Application</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">NeuroScribe Platform</h3>
+            <p class="project-card-desc">
+              A high-performance SaaS editor that utilizes AI vector-embeddings to organize and search developer study
+              notes.
+            </p>
+            <div class="project-card-tags">
+              <span class="project-tag">React / Vite</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <div class="project-card-links">
+              <a href="#" class="project-card-link">View Source <i data-lucide="git-branch"
+                  style="width: 14px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Machine Learning -->
+        <div class="project-card glass-panel" data-category="ml">
+          <div class="project-card-banner">
+            <img class="project-banner-img"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%230b0e1a%22/%3E%3Ccircle cx%3D%22200%22 cy%3D%22100%22 r%3D%2260%22 fill%3D%22none%22 stroke%3D%22%237c3aed%22 stroke-width%3D%222%22/%3E%3Cpath d%3D%22M150 100 L250 100 M200 50 L200 150 M165 65 L235 135 M165 135 L235 65%22 stroke%3D%22%233b82f6%22 stroke-width%3D%221.5%22 stroke-dasharray%3D%224 2%22/%3E%3C/svg%3E"
+              alt="Cognitive Diagnostic Model Preview">
+            <span class="project-card-badge">Analytics API</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Cognitive Diagnostic Model</h3>
+            <p class="project-card-desc">
+              A Python-based backend that models student capability metrics using Bayesian networks to generate tailored
+              testing materials.
+            </p>
+            <div class="project-card-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">PyTorch</span>
+            </div>
+            <div class="project-card-links">
+              <a href="#" class="project-card-link">View Repository <i data-lucide="github"
+                  style="width: 14px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Rock Paper Scissors AI Showstopper -->
+        <div class="project-card glass-panel" data-category="interactive">
+          <div class="project-card-banner">
+            <img class="project-banner-img"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%22http://www.w3.org/2000/svg%22 width%3D%22400%22 height%3D%22200%22%3E%3Crect width%3D%22100%25%22 height%3D%22100%25%22 fill%3D%22%23080c1f%22/%3E%3Ctext x%3D%2250%25%22 y%3D%22110%22 font-size%3D%2270%22 text-anchor%3D%22middle%22%3E✊ ✋ ✌️%3C/text%3E%3C/svg%3E"
+              alt="Rock Paper Scissors Game Preview">
+            <span class="project-card-badge">Hardware API / Vision</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">RPS-AI Camera Arena</h3>
+            <p class="project-card-desc">
+              An interactive computer vision project allowing users to play Rock Paper Scissors against an adaptive,
+              predictive AI opponent using their camera in real-time.
+            </p>
+            <div class="project-card-tags">
+              <span class="project-tag">MediaPipe Hands</span>
+              <span class="project-tag">Web Audio API</span>
+              <span class="project-tag">Vanilla JS</span>
+            </div>
+            <div class="project-card-links">
+              <button id="project-play-game" class="btn btn-primary btn-sm"
+                style="padding: 8px 16px; border-radius: 8px;">
+                Launch Live Game
+                <i data-lucide="play" style="width: 12px; height: 12px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive RPS Game Modal Dialog -->
+  <div class="game-modal" id="game-modal">
+    <div class="game-modal-overlay" id="game-modal-close-overlay"></div>
+    <div class="game-modal-container glass-panel">
+
+      <!-- Modal Header -->
+      <div class="game-modal-header">
+        <h3>
+          <i data-lucide="gamepad-2" style="color: hsl(var(--primary));"></i>
+          RPS-AI: Real-Time Gesture Arena
+        </h3>
+        <button class="game-close-btn" id="game-modal-close-btn" aria-label="Close game">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="game-modal-body">
+
+        <!-- Main Game Area -->
+        <div class="game-main-area">
+          <div class="arena-viewports">
+
+            <!-- Viewport 1: Player (Webcam Feed) -->
+            <div class="viewport-panel">
+              <div class="viewport-label">You (Webcam)</div>
+
+              <!-- Real-time gesture prediction overlay -->
+              <div class="gesture-detected-overlay" id="gesture-overlay">
+                Detected: <span id="gesture-detected-text">Searching...</span>
+              </div>
+
+              <!-- Stream Content Container -->
+              <div class="viewport-stream-container">
+                <video id="webcam-feed" autoplay playsinline muted></video>
+                <canvas id="hand-mesh-canvas"></canvas>
+              </div>
+
+              <!-- Placeholder screen prior to camera start -->
+              <div class="viewport-placeholder" id="camera-placeholder">
+                <i data-lucide="camera"></i>
+                <h5>Camera Access Required</h5>
+                <p>Click "Start Camera" to authorize your webcam for hand tracking computation.</p>
+                <button class="btn btn-primary" id="btn-enable-camera">
+                  Enable Camera
+                  <i data-lucide="camera-off" style="width: 14px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Viewport 2: AI Opponent -->
+            <div class="viewport-panel ai-view">
+              <div class="viewport-label">AI Opponent</div>
+
+              <div class="viewport-placeholder" id="ai-placeholder">
+                <div class="ai-avatar" id="ai-avatar">
+                  <div class="ai-avatar-inner">
+                    <i data-lucide="bot"></i>
+                  </div>
+                </div>
+                <div class="ai-choice-display" id="ai-choice-emoji">🤖</div>
+                <div class="ai-choice-label" id="ai-choice-label">Ready to play</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Arena Countdowns and Rounds Reveal Screen Overlay -->
+          <div class="arena-overlay-screen" id="arena-overlay">
+            <!-- Countdown states -->
+            <div class="countdown-number" id="countdown-text">3</div>
+
+            <!-- Final round show states -->
+            <div class="round-result-card" id="result-card">
+              <h4 class="round-result-title" id="result-title">YOU WIN!</h4>
+              <p class="round-result-subtitle" id="result-subtitle">Paper wraps Rock</p>
+              <button class="btn btn-primary" id="btn-next-round">Play Next Round</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Controls & Scoreboard -->
+        <div class="game-controls-sidebar">
+
+          <!-- Scoreboard Panel -->
+          <div class="scoreboard-card glass-panel">
+            <h4 class="scoreboard-title">
+              <i data-lucide="trophy" style="width: 16px; height: 16px; color: gold;"></i>
+              Arena Scoreboard
+            </h4>
+            <div class="scores-wrapper">
+              <div class="score-box">
+                <div class="score-label">Player</div>
+                <div class="score-num" id="score-player">0</div>
+              </div>
+              <div class="score-divider-vs">VS</div>
+              <div class="score-box">
+                <div class="score-label">AI</div>
+                <div class="score-num" id="score-ai">0</div>
+              </div>
+            </div>
+            <div class="streak-counter">
+              Current Streak: <span id="streak-num">0 Wins</span>
+            </div>
+          </div>
+
+          <!-- Game Controls Card -->
+          <div class="control-buttons-card glass-panel">
+            <button class="btn btn-primary game-btn-play" id="btn-start-round" disabled>
+              Play Round
+              <i data-lucide="swords"></i>
+            </button>
+
+            <div class="game-options-row">
+              <!-- Audio Settings -->
+              <button class="btn btn-secondary btn-icon" id="btn-toggle-sound" title="Toggle audio sound effects">
+                <i data-lucide="volume-2" id="sound-icon"></i>
+              </button>
+
+              <!-- Difficulty Selection Toggle -->
+              <button class="btn btn-secondary" id="btn-toggle-difficulty" title="Change AI logic difficulty">
+                Difficulty: <strong id="difficulty-label">Adaptive</strong>
+              </button>
+            </div>
+
+            <button class="btn btn-secondary" id="btn-reset-game">Reset Scoreboard</button>
+          </div>
+
+          <!-- History Logs Panel -->
+          <div class="history-card glass-panel">
+            <h4>Outcome Feed</h4>
+            <ul class="history-list" id="history-list">
+              <li class="history-row" style="justify-content: center; color: var(--text-secondary);">No matches played
+                yet.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">Reach Out</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Hero CTA Buttons -->
+      <div class="contact-hero-actions">
+        <a href="mailto:tabiquerokhristopher@gmail.com" class="btn btn-primary" id="contact-lets-build">
+          Let's Build Together
+          <i data-lucide="handshake"></i>
+        </a>
+        <a href="https://tabiquero-resume.vercel.app/" target="_blank" rel="noopener noreferrer"
+          class="btn btn-secondary" id="contact-download-resume">
+          Download Resume
+          <i data-lucide="download"></i>
+        </a>
+      </div>
+
+      <!-- Connect Cards Grid -->
+      <div class="connect-cards">
+
+        <!-- GitHub Primary -->
+        <a href="https://github.com/keyarvi" target="_blank" rel="noopener noreferrer" class="connect-card glass-panel"
+          id="connect-github-1">
+          <div class="connect-card-icon connect-icon-github">
+            <i data-lucide="github"></i>
+          </div>
+          <div class="connect-card-content">
+            <h4>GitHub</h4>
+            <span class="connect-card-handle">@keyarvi</span>
+            <p>Explore my code and open-source projects.</p>
+          </div>
+          <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
+        </a>
+
+        <!-- GitHub Secondary -->
+        <a href="https://github.com/krvt4" target="_blank" rel="noopener noreferrer" class="connect-card glass-panel"
+          id="connect-github-2">
+          <div class="connect-card-icon connect-icon-github">
+            <i data-lucide="github"></i>
+          </div>
+          <div class="connect-card-content">
+            <h4>GitHub</h4>
+            <span class="connect-card-handle">@krvt4</span>
+            <p>Another repo with personal experiments.</p>
+          </div>
+          <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/khristopher-tabiquero-24b4963a0/" target="_blank" rel="noopener noreferrer"
+          class="connect-card glass-panel" id="connect-linkedin">
+          <div class="connect-card-icon connect-icon-linkedin">
+            <i data-lucide="linkedin"></i>
+          </div>
+          <div class="connect-card-content">
+            <h4>LinkedIn</h4>
+            <span class="connect-card-handle">Khristopher Tabiquero</span>
+            <p>Connect with me professionally.</p>
+          </div>
+          <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:tabiquerokhristopher@gmail.com" class="connect-card glass-panel" id="connect-email">
+          <div class="connect-card-icon connect-icon-email">
+            <i data-lucide="mail"></i>
+          </div>
+          <div class="connect-card-content">
+            <h4>Email</h4>
+            <span class="connect-card-handle">tabiquerokhristopher@gmail.com</span>
+            <p>Send me a message directly.</p>
+          </div>
+          <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
+        </a>
+
+        <!-- Resume -->
+        <a href="https://tabiquero-resume.vercel.app/" target="_blank" rel="noopener noreferrer"
+          class="connect-card glass-panel" id="connect-resume">
+          <div class="connect-card-icon connect-icon-resume">
+            <i data-lucide="file-text"></i>
+          </div>
+          <div class="connect-card-content">
+            <h4>Resume</h4>
+            <span class="connect-card-handle">Download PDF</span>
+            <p>View my full experience and skills.</p>
+          </div>
+          <i data-lucide="arrow-up-right" class="connect-card-arrow"></i>
+        </a>
+
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card glass-panel">
+          <h3>Let's collaborate</h3>
+          <p>
+            Whether you want to discuss a new software project, an interactive machine learning pipeline, or talk about
+            computer vision implementations, feel free to drop a message.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-detail-text">
+                <span>Email Address</span>
+                <p><a href="mailto:tabiquerokhristopher@gmail.com">tabiquerokhristopher@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i data-lucide="map-pin"></i></div>
+              <div class="contact-detail-text">
+                <span>Location</span>
+                <p>Manila, Philippines</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/keyarvi" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="GitHub keyarvi"><i data-lucide="github"></i></a>
+            <a href="https://github.com/krvt4" target="_blank" rel="noopener noreferrer" class="btn-icon"
+              aria-label="GitHub krvt4"><i data-lucide="github"></i></a>
+            <a href="https://www.linkedin.com/in/khristopher-tabiquero-24b4963a0/" target="_blank"
+              rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-card glass-panel">
+          <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully (demo only)!');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send Message
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Khristopher Tabiquero. Built with Vanilla JS, CSS Grid &amp; MediaPipe.</p>
+    </div>
+  </footer>
+
+  <!-- Lucide Vector Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- MediaPipe Handpose Libraries & Utilities -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+  <!-- App Scripts -->
+  <script src="app.js"></script>
+  <script src="rps.js"></script>
+</body>
+
+</html>
