@@ -321,15 +321,26 @@ nav {
 
 .logo {
   font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 20px;
-  display: flex;
+  font-weight: 900;
+  font-size: 15px;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: hsl(var(--primary) / 0.08);
+  border: 1.5px solid hsl(var(--primary) / 0.25);
+  color: hsl(var(--text-primary));
+  transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
-.logo-dot {
-  color: hsl(var(--primary));
+.logo:hover {
+  background: hsl(var(--primary) / 0.16);
+  border-color: hsl(var(--primary) / 0.55);
+  transform: scale(1.05);
+  box-shadow: 0 0 16px hsl(var(--primary) / 0.22);
 }
 
 .nav-links {
@@ -340,30 +351,22 @@ nav {
 }
 
 .nav-link {
-  font-size: 13.5px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   padding: 8px 16px;
   border-radius: 20px;
   color: hsl(var(--text-secondary));
-  position: relative;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.08);
+}
+
 .nav-link.active {
-  color: hsl(var(--text-primary));
-}
-
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 3px;
-  border-radius: 2px;
-  background: hsl(var(--primary));
+  color: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.12);
 }
 
 .nav-actions {
@@ -469,17 +472,19 @@ nav {
   border-radius: 28px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transform: perspective(1000px) rotateY(-4deg) rotateX(3deg);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: all var(--transition-normal);
+  z-index: 2;
+  position: relative;
 }
 
 .hero-profile-card:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-6px);
-  box-shadow: 0 36px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px hsl(var(--primary) / 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45), 0 0 30px hsl(var(--primary) / 0.35);
+  border-color: hsl(var(--primary) / 0.5);
 }
 
 .hero-profile-img {
@@ -586,6 +591,16 @@ nav {
   font-weight: 600;
   white-space: nowrap;
   color: hsl(var(--text-primary));
+  z-index: 12; /* Ensure chips float on top of the profile card */
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.hero-chip:hover {
+  transform: scale(1.08) translateY(-4px) !important;
+  border-color: hsl(var(--primary) / 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 15px hsl(var(--primary) / 0.4);
+  color: #fff;
 }
 
 .hero-chip svg {
@@ -2406,4 +2421,89 @@ footer {
 @keyframes spin-mesh-inner {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Modern Rounded Square Social Buttons */
+.btn-social-square {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: hsl(var(--bg-surface));
+  border: 1px solid hsl(var(--border-color));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--text-secondary));
+  transition: all var(--transition-fast);
+}
+
+.btn-social-square i {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-social-square.btn-github {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--glass-border);
+}
+
+.btn-social-square.btn-github:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-social-square.btn-linkedin {
+  background: rgba(10, 102, 194, 0.05);
+  border-color: rgba(10, 102, 194, 0.15);
+}
+
+.btn-social-square.btn-linkedin i {
+  color: #0077b5;
+}
+
+.btn-social-square.btn-linkedin:hover {
+  background: rgba(10, 102, 194, 0.15);
+  border-color: rgba(10, 102, 194, 0.4);
+  color: #0077b5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.2);
+}
+
+.btn-social-square.btn-email {
+  background: hsl(var(--primary) / 0.04);
+  border-color: hsl(var(--primary) / 0.15);
+}
+
+.btn-social-square.btn-email:hover {
+  background: hsl(var(--primary) / 0.15);
+  border-color: hsl(var(--primary) / 0.4);
+  color: hsl(var(--primary));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px hsl(var(--primary) / 0.2);
+}
+
+/* Light Theme Social Button Colors */
+[data-theme="light"] .btn-social-square.btn-github {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #24292f;
+}
+
+[data-theme="light"] .btn-social-square.btn-github:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.18);
+  color: #000;
+}
+
+[data-theme="light"] .btn-social-square.btn-linkedin {
+  background: rgba(10, 102, 194, 0.03);
+  border-color: rgba(10, 102, 194, 0.08);
+}
+
+[data-theme="light"] .btn-social-square.btn-email {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.06);
 }
