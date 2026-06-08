@@ -205,24 +205,6 @@ section {
   font-weight: 800;
   line-height: 1.15;
   color: hsl(var(--text-primary));
-  position: relative;
-  display: inline-block;
-}
-
-/* Colored underline accent on section titles */
-.section-title::after {
-  content: '';
-  display: none;
-}
-
-[data-theme="dark"] .section-title {
-  color: hsl(var(--text-primary));
-  text-shadow: 0 2px 20px hsl(var(--primary) / 0.2);
-}
-
-[data-theme="light"] .section-title {
-  color: hsl(var(--text-primary));
-  text-shadow: none;
 }
 
 .section-divider {
