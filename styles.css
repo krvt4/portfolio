@@ -1312,7 +1312,8 @@ nav {
   padding: 20px;
   overflow: hidden;
   height: 100%;
-  min-height: 380px;
+  min-height: 340px;
+  min-width: 0;
 }
 
 .project-media-wrapper {
@@ -1347,6 +1348,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   direction: ltr;
+  min-width: 0;
   /* Always layout contents Left-to-Right */
 }
 
@@ -2329,41 +2331,41 @@ footer {
   height: 22px;
 }
 
-/* Icon color variants */
+/* Icon color variants — all use same primary purple for consistency */
 .connect-icon-github {
-  background: rgba(255, 255, 255, 0.08);
-  color: #e6edf3;
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
 }
 
 .connect-card:hover .connect-icon-github {
-  background: rgba(255, 255, 255, 0.15);
+  background: hsl(var(--primary) / 0.22);
 }
 
 .connect-icon-linkedin {
-  background: rgba(10, 102, 194, 0.18);
-  color: #4da3ff;
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
 }
 
 .connect-card:hover .connect-icon-linkedin {
-  background: rgba(10, 102, 194, 0.3);
+  background: hsl(var(--primary) / 0.22);
 }
 
 .connect-icon-email {
-  background: hsl(var(--primary) / 0.15);
+  background: hsl(var(--primary) / 0.12);
   color: hsl(var(--primary));
 }
 
 .connect-card:hover .connect-icon-email {
-  background: hsl(var(--primary) / 0.28);
+  background: hsl(var(--primary) / 0.22);
 }
 
 .connect-icon-resume {
-  background: hsl(var(--success) / 0.15);
-  color: hsl(var(--success));
+  background: hsl(var(--primary) / 0.12);
+  color: hsl(var(--primary));
 }
 
 .connect-card:hover .connect-icon-resume {
-  background: hsl(var(--success) / 0.28);
+  background: hsl(var(--primary) / 0.22);
 }
 
 /* Card text content */
@@ -2414,17 +2416,19 @@ footer {
 }
 
 /* Light theme overrides */
-[data-theme="light"] .connect-icon-github {
-  background: rgba(0, 0, 0, 0.06);
-  color: #24292f;
+[data-theme="light"] .connect-icon-github,
+[data-theme="light"] .connect-icon-linkedin,
+[data-theme="light"] .connect-icon-email,
+[data-theme="light"] .connect-icon-resume {
+  background: hsl(var(--primary) / 0.08);
+  color: hsl(var(--primary));
 }
 
-[data-theme="light"] .connect-card:hover .connect-icon-github {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-[data-theme="light"] .connect-icon-linkedin {
-  color: #0a66c2;
+[data-theme="light"] .connect-card:hover .connect-icon-github,
+[data-theme="light"] .connect-card:hover .connect-icon-linkedin,
+[data-theme="light"] .connect-card:hover .connect-icon-email,
+[data-theme="light"] .connect-card:hover .connect-icon-resume {
+  background: hsl(var(--primary) / 0.16);
 }
 
 /* Responsive connect cards */
