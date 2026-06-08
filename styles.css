@@ -205,6 +205,16 @@ section {
   font-weight: 800;
   line-height: 1.15;
   color: hsl(var(--text-primary));
+  margin-top: 6px;
+  margin-bottom: 4px;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .section-title {
+  color: hsl(var(--text-primary));
+  text-shadow: 0 1px 4px rgba(255,255,255,0.8);
 }
 
 .section-divider {
